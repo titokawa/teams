@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>知能検査 - 診断ページ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<nav>
+    <ul>
+        <li><a href="index.html">検査</a></li>
+        <li><a href="hospital_data.php">病院検索</a></li>
+        <li><a href="member_info.html"  >会員情報</a></li>
+        <li><a href="home.html"  >ホーム</a></li>
+    </ul>
+</nav>
+
+<body>
+    <div class="diagnosis-container">
+        <h2>知能検査</h2>
+        <p>説明書き：ここに診断に関する説明が入ります。</p>
+
+        <!-- 診断項目 -->
+        <div class="question-container">
+            <!-- 質問1 -->
+            <div class="question">
+                <p>質問1: ここに質問の内容が入ります。</p>
+                <label><input type="radio" name="q1" value="5">当てはまる</label>
+                <label><input type="radio" name="q1" value="4">やや当てはまる</label>
+                <label><input type="radio" name="q1" value="3">どちらとも言えない</label>
+                <label><input type="radio" name="q1" value="2">あまり当てはまらない</label>
+                <label><input type="radio" name="q1" value="1">当てはまらない</label>
+            </div>
+
+            <!-- 他の質問も同様に -->
+        </div>
+
+        <!-- 入力完了ボタン -->
+        <button id="completeButton" onclick="showResults()" disabled>入力完了</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
