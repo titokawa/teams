@@ -106,7 +106,7 @@ $dbh=null;
 
   <div class="card">
     <div class="card-header">住所</div>
-    <p class="card-text"><?php echo htmlspecialchars($rec['address'], ENT_QUOTES, 'UTF-8');?></p>
+    <p class="card-text"><?php echo htmlspecialchars($rec['address'], ENT_QUOTES, 'UTF-8');?>　<a href="https://www.google.co.jp/maps/place/<?php echo urlencode($rec['address']); ?>" class="btn">MAP</a></p>
   </div>
 
   <div class="card">
