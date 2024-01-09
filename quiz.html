@@ -6,18 +6,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>知能検査 - 診断ページ</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 0.5em 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .diagnosis-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #4CAF50;
+            text-align: center;
+        }
+
+        p {
+            color: #666;
+            text-align: center;
+        }
+
+        .question-container {
+            margin-top: 20px;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        #completeButton {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+        }
+
+        #completeButton:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
 </head>
 
-<nav>
-    <ul>
-        <li><a href="index.html">検査</a></li>
-        <li><a href="hospital.php">病院検索</a></li>
-        <li><a href="member_info.html"  >会員情報</a></li>
-        <li><a href="home.html"  >ホーム</a></li>
-    </ul>
-</nav>
-
 <body>
+    <nav>
+        <ul>
+            <li><a href="index.html">検査</a></li>
+            <li><a href="hospital_data.php">病院検索</a></li>
+            <li><a href="member_info.html">会員情報</a></li>
+            <li><a href="home.html">ホーム</a></li>
+        </ul>
+    </nav>
+
     <div class="diagnosis-container">
         <h2>知能検査</h2>
         <p>説明書き：ここに診断に関する説明が入ります。</p>
