@@ -8,7 +8,7 @@ function startDiagnosis() {
 // 病院データへ飛ぶボタンのクリックイベント
 function goToHospitalData() {
   // ここに病院データ一覧ページへのリダイレクト処理を追加する
-  window.location.href = "hospital.php"; // 仮のURL。実際の病院データ一覧ページのURLに置き換えてください
+  window.location.href = "hospital_data.php"; // 仮のURL。実際の病院データ一覧ページのURLに置き換えてください
 }
 
 // 病院検索ボタンのクリックイベント
