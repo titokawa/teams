@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>知能検査 - 分析結果</title>
-<!--   <link rel="stylesheet" href="styles.css"> -->
+  <!-- <link rel="stylesheet" href="styles.css"> -->
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -97,8 +97,8 @@
 <body>
   <nav>
     <ul>
-      <li><a href="quiz.html">検査</a></li>
-      <li><a href="hospital.php">病院検索</a></li>
+      <li><a href="index.html">検査</a></li>
+      <li><a href="hospital_data.php">病院検索</a></li>
       <li><a href="member_info.html">会員情報</a></li>
       <li><a href="home.html">ホーム</a></li>
     </ul>
@@ -106,6 +106,7 @@
 
   <div class="results-container">
     <h2>知能検査 - 分析結果</h2>
+    <div id="resultText"></div>
 
     <!-- ここに分析結果の表示を挿入する -->
     <div id="analysisResult">
@@ -118,17 +119,18 @@
       </ul>
     </div>
 
-    <!-- ここに細かい分析結果を表示するコンテナ -->
+    <!-- ここに細かい分析結果を表示するコンテナ
     <div id="detailedAnalysisResult">
       <h3>細かい分析結果：</h3>
-      <!-- 細かい分析結果の表示をここに挿入する -->
-    </div>
+       細かい分析結果の表示をここに挿入する
+    </div> -->
 
     <!-- 病院データへ飛ぶボタン -->
     <button onclick="goToHospitalData()">病院データへ飛ぶ</button>
   </div>
 
   <script src="script.js"></script>
+  <script src="./results_script.js"></script>
 </body>
 
 </html>
