@@ -130,7 +130,7 @@ td a:hover {
 
 <!--検索解除-->
 <?php if (isset($_POST["search"])) {?>
-<a href="http://localhost/hospital/select.php">検索を解除</a><br />
+<a href="http://localhost/teams-main/select.php">検索を解除</a><br />
 <?php } ?>
 
 <table border="1" style="border-collapse: collapse">
