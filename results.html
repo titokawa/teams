@@ -1,51 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>知能検査 - 分析結果</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
-    <script src="results_script.js" defer></script>
+<!--   <link rel="stylesheet" href="styles.css"> -->
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f8f8;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    nav {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 0.5em 0;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .results-container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h2 {
+      color: #4CAF50;
+    }
+
+    #analysisResult {
+      margin: 20px 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 10px 0;
+    }
+
+    #detailedAnalysisResult {
+      margin-top: 30px;
+      border-top: 2px solid #ddd;
+      padding-top: 20px;
+    }
+
+    h3 {
+      color: #4CAF50;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
 
-<nav>
-  <ul>
+<body>
+  <nav>
+    <ul>
       <li><a href="index.html">検査</a></li>
       <li><a href="hospital_data.php">病院検索</a></li>
-      <li><a href="member_info.html"  >会員情報</a></li>
-      <li><a href="home.html"  >ホーム</a></li>
-  </ul>
-</nav>
+      <li><a href="member_info.html">会員情報</a></li>
+      <li><a href="home.html">ホーム</a></li>
+    </ul>
+  </nav>
 
-<body>
   <div class="results-container">
     <h2>知能検査 - 分析結果</h2>
 
-    <div id="resultText">
+    <!-- ここに分析結果の表示を挿入する -->
+    <div id="analysisResult">
       <!-- 例：傾向や分析結果を表示するコンテンツ -->
+      <p>あなたの知能検査の結果は以下のような傾向があります：</p>
+      <ul>
+        <li>傾向1: ここに傾向1の説明や結果を表示</li>
+        <li>傾向2: ここに傾向2の説明や結果を表示</li>
+        <!-- 必要に応じて追加 -->
+      </ul>
     </div>
-    
-<!-- ここに分析結果の表示を挿入する -->
-<div id="analysisResult">
-  <!-- 例：傾向や分析結果を表示するコンテンツ -->
-  <p id="resultText"></p> <!-- 追加 -->
-  <ul>
-    <li>傾向1: ここに傾向1の説明や結果を表示</li>
-    <li>傾向2: ここに傾向2の説明や結果を表示</li>
-    <!-- 必要に応じて追加 -->
-  </ul>
-</div>
 
-    <!-- ここに細かい分析結果を表示するコンテナ
+    <!-- ここに細かい分析結果を表示するコンテナ -->
     <div id="detailedAnalysisResult">
       <h3>細かい分析結果：</h3>
-      細かい分析結果の表示をここに挿入する
-    </div> -->
+      <!-- 細かい分析結果の表示をここに挿入する -->
+    </div>
 
     <!-- 病院データへ飛ぶボタン -->
     <button onclick="goToHospitalData()">病院データへ飛ぶ</button>
   </div>
 
+  <script src="script.js"></script>
 </body>
+
 </html>
