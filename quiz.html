@@ -1,134 +1,122 @@
+<!-- quiz.html -->
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>知能検査 - 診断ページ</title>
+    <title>知能検査サイト - 検査内容</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script src="quiz_script.js" defer></script>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f8f8;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-
-        nav {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 0.5em 0;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            font-size: 16px;
-        }
-
-        .diagnosis-container {
-            max-width: 600px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: #4CAF50;
-            text-align: center;
-        }
-
-        p {
-            color: #666;
-            text-align: center;
-        }
-
-        .question-container {
-            margin-top: 20px;
-        }
-
-        .question {
-            margin-bottom: 20px;
-        }
-
+        /* スタイルを追加して横に並べる */
         label {
-            display: block;
+            display: none;
+            /* 最初は非表示にする */
+            width: 100%;
+            box-sizing: border-box;
             margin-bottom: 10px;
         }
-
-        input[type="radio"] {
+        input {
             margin-right: 5px;
-        }
-
-        #completeButton {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            display: block;
-            margin: 20px auto;
-        }
-
-        #completeButton:disabled {
-            background-color: #ccc;
-            cursor: not-allowed;
         }
     </style>
 </head>
 
 <body>
+    <header>
+        <h1>知能検査サイト</h1>
+    </header>
+
     <nav>
         <ul>
-            <li><a href="index.html">検査</a></li>
-            <li><a href="hospital_data.php">病院検索</a></li>
+            <li><a href="index.html">検査開始</a></li>
+            <li><a href="quiz.html">検査内容</a></li>
+            <li><a href="results.html">検査結果一覧</a></li>
+            <li><a href="hospital.php">病院検索</a></li>
             <li><a href="member_info.html">会員情報</a></li>
-            <li><a href="home.html">ホーム</a></li>
         </ul>
     </nav>
 
-    <div class="diagnosis-container">
-        <h2>知能検査</h2>
-        <p>説明書き：ここに診断に関する説明が入ります。</p>
+    <main>
+        <div id="quizContainer">
+            <h2>検査内容</h2>
+            <!-- ここに検査の質問フォームを追加 -->
+            <form id="quizForm">
+                <label class="question" data-question="1">
+                    <p>外に出るより家にいる方が好きだ</p>
+                    <input type="radio" name="question1" value="5">はい
+                    <input type="radio" name="question1" value="4">どちらかといえばはい
+                    <input type="radio" name="question1" value="3">どちらとも言えない
+                    <input type="radio" name="question1" value="2">どちらかといえばいいえ
+                    <input type="radio" name="question1" value="1">いいえ
+                </label>
+            </form>
 
-        <!-- 診断項目 -->
-        <div class="question-container">
-            <!-- 質問1 -->
-            <div class="question">
-                <p>質問1: ここに質問の内容が入ります。</p>
-                <label><input type="radio" name="q1" value="5">当てはまる</label>
-                <label><input type="radio" name="q1" value="4">やや当てはまる</label>
-                <label><input type="radio" name="q1" value="3">どちらとも言えない</label>
-                <label><input type="radio" name="q1" value="2">あまり当てはまらない</label>
-                <label><input type="radio" name="q1" value="1">当てはまらない</label>
-            </div>
+                <!-- 同様に他の質問も追加 -->
+                <form id="quizForm">
+                <label class="question" data-question="2">
+                    <p>誰かといるより一人でいる方を好む</p>
+                    <input type="radio" name="question2" value="5">はい
+                    <input type="radio" name="question2" value="4">どちらかといえばはい
+                    <input type="radio" name="question2" value="3">どちらとも言えない
+                    <input type="radio" name="question2" value="2">どちらかといえばいいえ
+                    <input type="radio" name="question2" value="1">いいえ
+                    <!-- 同様のラジオボタンの配置 -->
+                </label>
+            </form>
 
-            <!-- 他の質問も同様に -->
+                <!-- 以下同様に質問を追加 -->
+                <form id="quizForm">
+                    <label class="question" data-question="3">
+                        <p>決められた予定より自分のペースで進めたい</p>
+                        <input type="radio" name="question3" value="5">はい
+                        <input type="radio" name="question3" value="4">どちらかといえばはい
+                        <input type="radio" name="question3" value="3">どちらとも言えない
+                        <input type="radio" name="question3" value="2">どちらかといえばいいえ
+                        <input type="radio" name="question3" value="1">いいえ
+                        <!-- 同様のラジオボタンの配置 -->
+                    </label>
+                </form>
+                <!-- 以下同様に質問を追加 -->
+
+                    <form id="quizForm">
+                        <label class="question" data-question="4">
+                            <p>人と話す時は雑談よりも重要な話題を好む</p>
+                            <input type="radio" name="question4" value="5">はい
+                            <input type="radio" name="question4" value="4">どちらかといえばはい
+                            <input type="radio" name="question4" value="3">どちらとも言えない
+                            <input type="radio" name="question4" value="2">どちらかといえばいいえ
+                            <input type="radio" name="question4" value="1">いいえ
+                        </label>
+                    </form>
+        
+                        <form id="quizForm">
+                            <label class="question" data-question="5">
+                                <p>話題の重要性は自分にとって必要であるかどうかだ</p>
+                                <input type="radio" name="question5" value="5">はい
+                                <input type="radio" name="question5" value="4">どちらかといえばはい
+                                <input type="radio" name="question5" value="3">どちらとも言えない
+                                <input type="radio" name="question5" value="2">どちらかといえばいいえ
+                                <input type="radio" name="question5" value="1">いいえ
+                            </label>
+                        </form>
+        
+                        <!-- 以下同様に質問を追加 -->
+
+<!-- quiz.html -->
+<button id="nextButton" onclick="nextQuestion()">次に進む</button>
+<button id="resultButton" onclick="calculateResult()">結果に進む</button>
+
+            </form>
         </div>
+    </main>
 
-        <!-- 入力完了ボタン -->
-        <button id="completeButton" onclick="showResults()" disabled>入力完了</button>
-    </div>
+    <footer>
+        <p>&copy; 2024 知能検査サイト</p>
+    </footer>
 
-    <script src="script.js"></script>
 </body>
 
 </html>
